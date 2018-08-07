@@ -1,6 +1,6 @@
 'use strict'
 
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var AnimalSchema = Schema({
@@ -13,4 +13,5 @@ var AnimalSchema = Schema({
     }
 });
 
-module.exports = mongoose.model('Animal', AnimalSchema);//export es volverla publica
+module.exports = mongoose.model('Animal', AnimalSchema);
+

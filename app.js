@@ -10,11 +10,15 @@ var bodyParse = require('body-parser');
 var app = express();
 
 var animalRoutes = require('./routes/animal');
+var userRoutes = require('./routes/user');
 
 app.use(bodyParse.urlencoded({extended: false}));
+app.use(bodyParse.json({limit: '50mb'}));
 app.use(bodyParse.json());
 
 app.use('/api', animalRoutes);
+app.use('/api', userRoutes);
+
 
 app.get('/test',(req, res)=>{
     res.status(200).send({
