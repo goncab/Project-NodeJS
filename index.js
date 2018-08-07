@@ -19,11 +19,11 @@ mongoose.connect('mongodb://localhost:27017/zoo',{useMongoClient: true})//Url es
     .catch(err => console.log(err));*/
 
     var mongoose = require('mongoose');
-    var port = process.env.port || 3000;
+    var port = process.env.PORT || 3000;
     var app = require('./app');
 
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://localhost:27017/zoo');mongoose.connect('mongodb://zoo-WS:gio1994@ds018248.mlab.com:18248/zoo-ws');
+    mongoose.connect('mongodb://zoo-WS:gio1994@ds018248.mlab.com:18248/zoo-ws');
     app.listen(port);
 
     console.log('Backend is running')
